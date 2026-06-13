@@ -4,9 +4,7 @@ import { motion } from "framer-motion";
 const Hero = () => {
     return (
         <section className="w-full mb-10">
-
-            <div className="relative h-[82vh] md:h-[95vh] w-full overflow-hidden pt-10">
-
+            <div className="relative h-[82vh] md:h-[95vh] w-full overflow-hidden">
                 <video
                     autoPlay
                     loop
@@ -14,7 +12,8 @@ const Hero = () => {
                     playsInline
                     className="absolute top-0 left-0 w-full h-full object-cover"
                 >
-                    <source src="/hero.mp4" type="video/mp4" />
+                    backgroundImage: `url('${import.meta.env.BASE_URL}our.jpg')`
+                    <source src={`${import.meta.env.BASE_URL}hero.mp4`} type="video/mp4" />
                 </video>
 
                 <div className="absolute inset-0 bg-black/60"></div>
@@ -23,14 +22,7 @@ const Hero = () => {
 
                     <div className="max-w-4xl text-white text-center md:text-left">
 
-                        <motion.p
-                            initial={{ opacity: 0 }}
-                            animate={{ opacity: 1 }}
-                            transition={{ delay: 0.3, duration: 0.8 }}
-                            className="text-amber-200 text-sm md:text-base mb-4"
-                        >
-                            BlueWave Mawimbi Enterprises Company Limited
-                        </motion.p>
+
 
                         <motion.h2
                             initial={{ x: -100, opacity: 0 }}
@@ -46,12 +38,10 @@ const Hero = () => {
                         <motion.p
                             initial={{ opacity: 0 }}
                             animate={{ opacity: 1 }}
-                            transition={{ delay: 0.5, duration: 0.8 }}
-                            className="text-gray-200 text-base md:text-lg mb-6"
+                            transition={{ delay: 0.3, duration: 0.8 }}
+                            className=" text-sm md:text-base mb-4"
                         >
-                            To supply high quality commercial explosives, mining tools and equipment and deliver safe,
-                            reliable and cost-effective drilling, blasting and related services that exceed client expectations
-                            while ensuring safety, environmental care and sustainable value.
+                            We supply high quality commercial explosives, mining tools and equipment and deliver safe, reliable and cost-effective drilling, blasting and related services that exceed our clients' expectations while ensuring safety, environmental care and sustainable value.
                         </motion.p>
 
                         <motion.div
@@ -68,9 +58,7 @@ const Hero = () => {
                                 Contact Us
                             </button>
                         </motion.div>
-
                     </div>
-
                 </div>
             </div>
 

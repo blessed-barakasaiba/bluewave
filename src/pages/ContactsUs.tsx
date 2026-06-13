@@ -1,34 +1,43 @@
 import { CheckCircle, Send } from "lucide-react"
-import { FaEnvelope, FaPhoneAlt, FaFacebook, FaLinkedin, FaInstagram, FaTwitter, FaWhatsapp } from "react-icons/fa";
-import { MapPin, PhoneCall } from "lucide-react";
+import { FaEnvelope, FaPhoneAlt, FaFacebook, FaLinkedin, FaInstagram, FaTwitter, FaWhatsapp,FaPhone } from "react-icons/fa";
+import { MapPin } from "lucide-react";
 import { motion } from "framer-motion"
+import contactImage from "../assets/products/WhatsApp Image 2026-06-11 at 9.09.30 PM.jpeg"
 function ContactUs() {
     const contact_info = [
-        { icon: <MapPin />, title: 'Vist Our Office', subtitle: '999 Dar es Salaam,Kahama,illage, Tanzani', time: "" },
+        { icon: <MapPin />, title: 'Visit Our Office', subtitle: '999 Dar es Salaam,Kahama,village, Tanzania', time: "" },
         { icon: <FaPhoneAlt />, title: 'Call Us', subtitle: '+255 774 853 113, +255 762 274 098, +255 772 537 411', time: "Mon–Fri, 9am – 6pm PST" },
         { icon: <FaEnvelope />, title: 'Email Us', subtitle: 'bluewavemawimbi@gmail.com', time: "" },
     ]
     return (
         <>
-            <section className="bg-cover bg-center h-screen w-full flex items-center justify-center relative pb-14 bg-gray-50" style={{
-                backgroundImage: "url('/our.jpg')",
+            <section className="bg-cover bg-center h-[60vh] w-full flex items-center justify-center relative pb-14 bg-gray-50" style={{
+                backgroundImage: `url(${contactImage})`
             }}>
-                <div className="absolute inset-0 bg-black/50"></div>
-                <div className="relative ">
+                <div className="absolute inset-0 bg-black/50 "></div>
+                <div className="relative flex items-center justify-center flex-col gap-5">
+                    <span className=" px-3 py-2 flex flex-row gap-2 text-white
+                     justify-center items-center  rounded-full bg-red-500/30 
+                     border-2 border-red-500 font-bold "><FaPhone/>Get Intouch</span>
                     <motion.h2
                         initial={{ opacity: 0, y: -90 }}
                         whileInView={{ opacity: 1, y: 0 }}
                         transition={{ duration: 1 }}
-                        className="text-white font-bold text-5xl ">Contacts Us</motion.h2>
+                        className="text-white font-extrabold text-5xl md:text-9xl ">Contacts <span className="text-blue-500">Us</span></motion.h2>
+                    <motion.h5 
+                        initial={{ opacity: 0, y: 90 }}
+                        whileInView={{ opacity: 1, y: 0 }}
+                        transition={{ duration: 1 }}
+                    className="text-white text-center font-semibold text-lg px-4">Get in touch with our experts for all your mining explosive solutions needs</motion.h5>
                 </div>
             </section>
-            <section className="flex md:flex-row flex-col px-4 md:px-6 lg:px-8 xl:px-16 2xl:px-24 py-14 bg-gray-50">
+            <section className="flex md:flex-row flex-col px-4 md:px-6 lg:px-8 xl:px-16 2xl:px-70 py-14 bg-gray-50">
                 <div className="flex md:flex-row flex-col  items-center justify-evenly w-full gap-14">
                     {contact_info.map(info => <Card icon={info.icon} title={info.title} subtitle={info.subtitle} time={info.time} />)}
                 </div>
             </section>
             <section className=" bg-gray-50 flex md:flex-row flex-col gap-14
-             px-5 md:px-6 lg:px-8 xl:px-16 2xl:px-24 py-14 ">
+             px-5 md:px-6 lg:px-8 xl:px-16 2xl:px-70 py-14">
                 <motion.div
                     initial={{ opacity: 0, y: 60 }}
                     whileInView={{ opacity: 1, y: 0 }}
@@ -73,7 +82,7 @@ function ContactUs() {
                         </div>
                         <textarea name="" id="" cols={20} placeholder="Your message" className=" h-44 outline-none rounded-lg p-2 w-full resize-y focus:border-blue-500 focus:border-2 border"></textarea>
                         <button onClick={(e) => e.preventDefault} className="w-full bg-blue-500 gap-1 rounded-lg md:py-3 py-3 flex flex-row flex-nowrap items-center justify-center">
-                            <span>Send Message</span> <Send className="size-4 " />
+                            <span className="text-white font-bold text-lg">Send Message</span> <Send size={14} className="text-white" />
                         </button>
                     </form>
 
@@ -141,10 +150,11 @@ function ContactUs() {
                     </motion.div>
                 </div>
             </section>
-            <section className="flex flex-col items-center justify-center bg-gray-50  gap-8 px-5 md:px-6 lg:px-8 xl:px-16 2xl:px-24 py-14 ">
+
+            <section className="flex flex-col items-center justify-center bg-gray-50  gap-8 px-5 md:px-6 lg:px-8 xl:px-16 2xl:px-70 py-14 ">
                 <h1 className="text-blue text-3xl md:text-4xl lg:text-5xl xl:text-6xl font-bold">Visit Our Location</h1>
                 <h3 className="text-lg">Find Us in Dar es Salam, Kahama, Kasegeza village,Tanzania</h3>
-                <div className="w-full h-auto bg-gray-400 p-4 rounded-lg content-fit">
+                <div className="w-full h-auto bg-gray-400 p-1 rounded-lg content-fit">
                     <Map/>
                 </div>
             </section>
@@ -184,11 +194,12 @@ function Map() {
       height="500"
       loading="lazy"
       allowFullScreen
-      className="rounded-lg"
-      src="https://www.google.com/maps/embed?pb=YOUR_EMBED_URL"
+      className="rounded-lg border-0"
+      src="https://www.google.com/maps?q=-3.8,32.9&z=8&output=embed"
     />
   );
 }
+
 
 
 export default ContactUs

@@ -1,63 +1,79 @@
-import { ClipboardList, Gift, Handshake } from "lucide-react";
+import { motion } from "framer-motion";
+import { Link } from "react-router-dom";
 
-const HowItWork =()=>{
-    const steps = [
-        {
-            id:1,
-            name: 'Choose a Cause',
-            description: 'Select from our various initiatives that resonate with you',
-            icon: <ClipboardList className="h-8 w-8 text-amber-600" />,
-        },
-        {
-            id: 2,
-            name: 'Make a Donation',
-            description: 'Contribute any amount you wish to support the cause',
-            icon: <Handshake className="h-8 w-8 text-amber-600" />,
-        },
-        {
-            id: 3,
-            name: 'See the Impact',
-            description: 'Receive updates on how your donation is making a difference',
-            icon: <Gift className="h-8 w-8 text-amber-600" />,
-        },
+const steps = [
+  {
+    number: "01",
+    title: "Consultation",
+    description: "Understand client requirements and project objectives.",
+  },
+  {
+    number: "02",
+    title: "Planning",
+    description: "Design safe and effective blasting and drilling plans.",
+  },
+  {
+    number: "03",
+    title: "Execution",
+    description: "Carry out operations using certified professionals.",
+  },
+  {
+    number: "04",
+    title: "Delivery",
+    description: "Ensure successful completion and client satisfaction.",
+  },
+];
+
+const HowItWork = () => {
+  return (
+    <section className="py-5">
+
+      <div className="">
+
+        <h2 className="text-4xl font-bold text-center mb-12">
+          How We Work
+        </h2>
+
+        <div className="grid  md:grid-cols-4 gap-8 mb-5">
+
+          {steps.map((step, index) => (
+            <motion.div
+              key={index}
+              initial={{ opacity: 0, y: 40 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              whileHover={{ y: -10 }}
+              
+              transition={{ duration: 0.4 }}
+              className="bg-white p-8 rounded-2xl shadow-md flex items-start flex-col"
+            >
+              <div className="w-16 h-16 rounded-full bg-red-600 text-white flex items-center justify-center text-xl font-bold mb-4">
+                {step.number}
+              </div>
+
+              <h3 className="font-bold text-xl mb-3">
+                {step.title}
+              </h3>
+
+              <p className="text-gray-600">
+                {step.description}
+              </p>
+            </motion.div>
+          ))}
+
+        </div>
 
 
-    ];
+        {/* Centered Button */}
+        <div className="flex justify-center">
+          <Link to="about" className="px-6 py-3 border border-red-600 rounded-md font-semibold hover:bg-red-700 bg-red-600 text-white hover:text-white transition">
+            SEE MORE ABOUT THIS
+          </Link>
+        </div>
 
-    return(
-        <section className="bg-white py-16">
-            <div className="max-w-7xl m-auto px-4">
-                <div>
-                    <div className="text-center mb-16">
-                        <h2 className="text-3xl text-gray-800 font-bold mb-3">How It Works</h2>
-                        <p className="text-gray-600 max-w-3xl m-auto text-xl mb-4">Your support can change lives in just a few simple steps</p>
-                    </div>
+      </div>
 
-                    <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-                        {steps.map((step, index)=>(
-
-                            <div key={step.id} className="relative">
-
-                                <div className="bg-amber-50 p-8 rounded-lg shadow-sm hover:shadow-md transition-shadow h-full">
-                                    <div className="flex items-center justify-center rounded-full h-16 w-16 bg-amber-100 mb-6 mx-auto">
-                                        {step.icon}
-                                    </div>
-                                    <h2 className="text-gray-900 text-center font-bold text-xl mb-3">{step.name}</h2>
-                                    <p className="text-gray-600 text-center">{step.description}</p>
-                                </div>
-
-                                {index < steps.length - 1 && (
-                                    <div className="hidden md:block absolute top-1/2 right-0 transform translate-x-1/2 -translate-y-1/2" >
-                                         <div className="h-1 w-8 bg-amber-200"></div>
-                                    </div>
-                                )}
-                            </div>
-                        ))}
-                    </div>
-                </div>
-            </div>
-        </section>
-    )
-}
+    </section>
+  );
+};
 
 export default HowItWork;

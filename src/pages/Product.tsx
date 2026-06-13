@@ -6,17 +6,18 @@ import product4 from "../assets/products/product4.jpeg";
 import product5 from "../assets/products/product5.jpeg";
 import product6 from "../assets/products/product6.jpeg";
 import product7 from "../assets/products/product7.jpeg";
+import productImage from "../assets/products/product1.jpeg";
 
 const Product = () => {
   const phoneNumber = "0652298284"; // remove + sign
 
 
     const services = [
-        { id: 1, name: "EMULSION EXPLOSIVES", description: "High performance watergel esplosives for various blasting applications.", image: product1 },
-        { id: 2, name: "ANFO", description: "Ammonium Nitrate Fuel Oil (ANFO) for economical bulk blasting", image: product2 },
-        { id: 3, name: "DETONATING CORD", description: "High strength det cord for reliable blasting performance.", image: product3 },
-        { id: 4, name: "NON-ELECTRIC DETONATORS", description: "Reliable and accurate initiation with high safety standards.", image: product4 },
-        { id: 5, name: "ELECTRIC DETONATORS", description: "Instantaneous electric detonators for precise blasting control.", image: product5 },
+        { id: 1, name: "NONEL", description: "High performance watergel esplosives for various blasting applications.", image: product1 },
+        { id: 2, name: "INSTANTANEOS ELICTRICAL DETONATORS", description: "Ammonium Nitrate Fuel Oil (ANFO) for economical bulk blasting", image: product2 },
+        { id: 3, name: "BOOSTER-150g", description: "High strength det cord for reliable blasting performance.", image: product3 },
+        { id: 4, name: "TROJAN CAST BOOTERT-400g", description: "Reliable and accurate initiation with high safety standards.", image: product4 },
+        { id: 5, name: "", description: "Instantaneous electric detonators for precise blasting control.", image: product5 },
         { id: 6, name: "BLASTING ACCESSORIES", description: "Complete range of accessories and consumables", image: product6 },
         { id: 7, name: "BOOSTERS", description: "High energy boosters for enhanced detonation and performance.", image: product7 },
     ];
@@ -36,8 +37,8 @@ Please give me a quotation.`;
 };
     return (
         <div className="">
-            <div className="bg-cover bg-center h-[70vh] w-full flex items-center justify-center relative" style={{
-                backgroundImage: "url('/our.jpg')",
+            <div className="bg-cover bg-center h-[60vh] w-full flex items-center justify-center relative" style={{
+                backgroundImage: `url(${productImage})`
             }}>
                 <div className="absolute inset-0 bg-black/50"></div>
                 <div className="relative ">
@@ -45,7 +46,7 @@ Please give me a quotation.`;
                         initial={{ opacity: 0, y: -90 }}
                         whileInView={{ opacity: 1, y: 0 }}
                         transition={{ duration: 1 }}
-                        className="text-white font-bold text-5xl ">Our Products</motion.h2>
+                        className="text-white font-bold text-5xl md:text-9xl ">Our Products</motion.h2>
                 </div>
             </div>
 
