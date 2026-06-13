@@ -11,14 +11,14 @@ function Navbar() {
     const [isOpen, setIsOpen] = useState(false);
     const quick_links = [
         { id: 1, name: "Home", path: "/" },
-        { id: 2, name: "About Us", path: "/" },
-        { id: 3, name: "Our Services", path: "/" },
-        { id: 4, name: "Our Commandment", path: "/" },
-        { id: 5, name: "Industries We Serve", path: "/" },
-        { id: 6, name: "Contact Us", path: "/" },
+        { id: 2, name: "About Us", path: "/about" },
+        { id: 3, name: "Our Services", path: "/ourServices" },
+        { id: 3, name: "Our Products", path: "/products" },
+        { id: 6, name: "Gallery", path: "/contact" },
+        { id: 6, name: "Contact Us", path: "/contact" },
     ];
     return (
-        <section className="fixed top-0 left-0 w-full z-50 bg-white flex flex-row py-3 justify-between items-center px-4 md:px-6 lg:px-8 xl:px-16 2xl:px-24">
+        <section className="fixed top-0 left-0 w-full z-50 bg-white flex flex-row py-3 justify-between items-center px-4 md:px-6 lg:px-8 xl:px-16 2xl:px-24 border-b">
             <div className="flex flex-row flex-nowrap items-center gap-3 ">
                 <img src={logo} className="h-12 w-9" alt="logo" />
 
@@ -28,7 +28,7 @@ function Navbar() {
                 </div>
             </div>
 
-            <div className="space-x-7 justify-center items-center hidden md:flex" >
+            <div className="space-x-3 justify-center items-center hidden md:flex" >
                 {quick_links.map((link) => (
                     <div key={link.id}>
                         <Link to={link.path}>{link.name}</Link>
@@ -90,13 +90,12 @@ function Navbar() {
             <div className="navbar-actions gap-6 items-center justify-center hidden md:flex">
                 <button
                     className="flex-row flex items-center gap-2
-                 active:scale-95 px-4 py-2 rounded-full shadow-md 
-                 shadow-blue-300 hover:shadow-lg hover:shadow-blue-300
-                 hover:scale-105 duration-300 hover:bg-blue-3 bg-gradient-to-r from-blue-100 to-red-500
+                 active:scale-95 px-4 py-2 rounded-lg shadow-md 
+                 hover:scale-105 duration-300 hover:bg-blue-3 bg-red-500 text-white hover:bg-red-600 font-semibold 
                   ">
                     <BsTelephone />
                     <div className=" flex flex-col items-start leading-none ">
-                        <span className="text-xs ">Call us</span> +255 753 543 252</div>
+                        <span className="text-sm ">Call Us</span> +255 753 543 252</div>
                 </button>
                 <span><FaGlobe /></span>
                 <span className="flex flex-row items-center gap-2  hover:scale-105 hover:big-blue-300"

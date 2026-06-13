@@ -28,7 +28,7 @@ const Footer = () => {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true, amount: 0.3 }}
             transition={{ duration: 0.8 }}
-            className="w-full h-auto bg-gray-900 flex flex-col justify-center items-center gap-3 px-4 md:px-6 lg:px-8 xl:px-16 2xl:px-24">
+            className="w-full h-auto bg-gray-900 flex flex-col justify-center items-center gap-3 px-4 md:px-6 lg:px-8 xl:px-16 2xl:px-24 pt-8">
             <div className="flex justify-between  md:flex-row flex-col w-full">
                 <div className="flex flex-col flex-2 pl-0 p-12 pb-6 md:pl-0 gap-5 justify-center">
                     <div className="flex flex-row flex-nowrap items-center  gap-3  ">
@@ -122,7 +122,7 @@ const Footer = () => {
                 initial={{ opacity: 0, y: 60 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true, amount: 0.3 }}
-                transition={{ duration: 0.8 }} className="flex items-center justify-center py-3  flex-row flex-wrap text-xs  w-full text-gray-500">
+                transition={{ duration: 0.8 }} className="flex items-center justify-between py-3  flex-row flex-wrap text-xs  w-full text-gray-500">
                 <p>&copy;2025 bluewave platform</p>
                 <p>Privacy policy Terms of service Cookie policy Security</p>
             </motion.div>

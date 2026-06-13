@@ -1,10 +1,9 @@
-import Navbar from "./Navbar";
+
 import { motion } from "framer-motion";
 
 const Hero = () => {
     return (
         <section className="w-full mb-10">
-            <Navbar />
 
             <div className="relative h-[82vh] md:h-[95vh] w-full overflow-hidden pt-10">
 
