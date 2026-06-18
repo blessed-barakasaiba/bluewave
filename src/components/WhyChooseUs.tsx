@@ -3,22 +3,22 @@ import { motion } from "framer-motion";
 
 const features = [
   {
-    icon: <ShieldCheck />,
+    icon: <ShieldCheck size={40}/>,
     title: "Safety First",
     desc: "Strict safety standards in every operation."
   },
   {
-    icon: <Award />,
+    icon: <Award size={40}/>,
     title: "Quality Products",
     desc: "Reliable explosives and mining equipment."
   },
   {
-    icon: <Clock />,
+    icon: <Clock  size={40}/>,
     title: "On-Time Delivery",
     desc: "Fast and dependable service delivery."
   },
   {
-    icon: <Users />,
+    icon: <Users size={40}/>,
     title: "Experienced Team",
     desc: "Qualified professionals with industry expertise."
   }
@@ -29,7 +29,7 @@ const WhyChooseUs = () => {
     <section className="py-5 ">
       <div className="">
 
-        <h2 className="text-4xl font-bold text-center mb-4">
+        <h2 className="text-4xl font-bold text-center mb-4 text-blue-600">
           Why Choose Us
         </h2>
 

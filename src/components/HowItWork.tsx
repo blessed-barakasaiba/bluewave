@@ -15,7 +15,7 @@ const steps = [
   {
     number: "03",
     title: "Execution",
-    description: "Carry out operations using certified professionals.",
+    description: "Carry out operations using certified professionals while following SOP.",
   },
   {
     number: "04",
@@ -30,7 +30,7 @@ const HowItWork = () => {
 
       <div className="">
 
-        <h2 className="text-4xl font-bold text-center mb-12">
+        <h2 className="text-4xl text-blue-600 font-bold text-center mb-12">
           How We Work
         </h2>
 

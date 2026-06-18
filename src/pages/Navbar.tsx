@@ -1,4 +1,4 @@
-import { BsTelephone } from "react-icons/bs";
+import { BsTelephone, BsWhatsapp } from "react-icons/bs";
 import logo from "../assets/logo.png";
 import { Link, useLocation } from "react-router-dom";
 import { Menu, X } from "lucide-react";
@@ -10,7 +10,7 @@ function Navbar() {
     const [scrolled, setScrolled] = useState(false);
     const location = useLocation();
 
-    const phoneNumber = "255753543252";
+    const phoneNumber = "255758585682";
 
     const goToWhatsApp = () => {
         const message = "Hello, I would like to get more information about your services.";
@@ -65,15 +65,15 @@ function Navbar() {
                     transition={{ type: "spring", stiffness: 300 }}
                 >
                     <motion.h1
-                        className="font-bold text-lg md:text-xl bg-blue-600 bg-clip-text text-transparent"
+                        className="font-bold text-sm md:text-md whitespace-nowrap bg-blue-600 bg-clip-text text-transparent"
                     >
-                        BlueWave Mawimbi
+                        BLUEWAVE MAWIMBI
                     </motion.h1>
                     <motion.span
-                        className="text-xs text-gray-500 font-medium"
+                        className="text-xs whitespace-nowrap text-gray-500 font-medium"
                         whileHover={{ opacity: 0.8 }}
                     >
-                        Enterprises Company
+                        Enterprises Company Limited
                     </motion.span>
                 </motion.div>
             </motion.div>
@@ -191,23 +191,49 @@ function Navbar() {
                                     </Link>
                                 </motion.div>
                             ))}
-                            <button onClick={() => goToWhatsApp()} className="bg-red-600 hover:bg-red-700 px-8 py-4 flex flex-col items-start rounded-lg text-white font-semibold">
-                                <span className="text-xs opacity-90">Call Us</span>
-                                <span className="text-sm font-bold">+255 753 543 252</span>
-                            </button>
+                            <motion.button
+                            
+                                    initial={{ opacity: 0, x: -80 }}
+                                    animate={{ opacity: 1, x: 0 }}
+                                    exit={{ opacity: 0, x: -80 }}
+                                    transition={{
+                                        delay:  0.5,
+                                        duration: 0.8,
+                                        type: "spring",
+                                        stiffness: 300
+                                    }}
+                            whileTap="tap"
+                            className="flex w-full gap-3 items-center justify-center py-2 bg-red-600 hover:bg-red-700 rounded-lg text-white font-semibold">
+
+                            <motion.div
+                                        animate={{ rotate: [0, 15, -15, 0] }}
+                                        transition={{
+                                            duration: 0.5,
+                                            repeat: Infinity,
+                                            repeatDelay: 3,
+                                            repeatType: "reverse"
+                                        }}
+                                        >
+                                <BsWhatsapp size={25} className="fill-white"/>
+                                </motion.div>
+                                <button onClick={() => goToWhatsApp()} className="flex flex-col items-start   ">
+                                    <span className="text-xs opacity-90">Call Us</span>
+                                    <span className="text-sm font-bold">+255 758 585 682</span>
+                                </button>
+                            </motion.button>
+                            
                         </div>
                     </motion.div>
                 )}
             </AnimatePresence>
 
-            <div className="navbar-actions gap-4 items-center justify-center hidden md:flex">
-                {/* Call Button */}
+            <div className="navbar-actions gap-4 items-center justify-center hidden md:flex" onClick={() => goToWhatsApp()} >
                 <motion.button
                     whileTap="tap"
-                    className="flex-row flex items-center gap-2 px-4 py-2 rounded-lg shadow-md bg-red-500   text-white font-semibold"
+                    className="flex-row flex items-center gap-2 px-4 py-2 rounded-xl shadow-md bg-red-500   text-white font-semibold"
                 >
                     <motion.div
-                        animate={{ rotate: [0, 5, -5, 0] }}
+                        animate={{ rotate: [0, 15, -15, 0] }}
                         transition={{
                             duration: 0.5,
                             repeat: Infinity,
@@ -215,16 +241,13 @@ function Navbar() {
                             repeatType: "reverse"
                         }}
                     >
-                        <BsTelephone />
+                        <BsWhatsapp size={22} />
                     </motion.div>
-                    <button onClick={() => goToWhatsApp()} className="flex flex-col items-start leading-none">
+                    <button className="flex flex-col text-xs items-start justify-center">
                         <span className="text-xs opacity-90">Call Us</span>
-                        <span className="text-sm font-bold">+255 753 543 252</span>
+                        <span className="text-sm font-bold">+255 758 585 682</span>
                     </button>
                 </motion.button>
-
-
-
             </div>
 
 

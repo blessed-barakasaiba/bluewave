@@ -1,9 +1,10 @@
 
 import { motion } from "framer-motion";
+import { Link } from "react-router-dom";
 
 const Hero = () => {
     return (
-        <section className="w-full mb-10">
+        <section className="w-full ">
             <div className="relative h-[82vh] md:h-[95vh] w-full overflow-hidden">
                 <video
                     autoPlay
@@ -50,13 +51,13 @@ const Hero = () => {
                             transition={{ delay: 0.8, duration: 0.6 }}
                             className="flex flex-col md:flex-row gap-4 justify-center md:justify-start"
                         >
-                            <button className="px-6 py-3 bg-red-600 hover:bg-red-700 transition font-semibold rounded-md">
+                            <Link to="/ourServices" className="px-6 py-3 bg-red-600 hover:bg-red-700 transition font-semibold rounded-md">
                                 Our Services
-                            </button>
+                            </Link>
 
-                            <button className="px-6 py-3 border border-white hover:bg-white hover:text-black transition font-semibold rounded-md">
+                            <Link to="/contact" className="px-6 py-3 border border-white hover:bg-white hover:text-black transition font-semibold rounded-md">
                                 Contact Us
-                            </button>
+                            </Link>
                         </motion.div>
                     </div>
                 </div>

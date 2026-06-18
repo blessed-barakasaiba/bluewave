@@ -28,7 +28,7 @@ const OurCoreValue = () => {
     <section className="py-16 bg-white">
       <div className="">
 
-        <h2 className="text-4xl font-bold text-center mb-12">
+        <h2 className="text-4xl text-blue-600 font-bold text-center mb-12">
           Our Core Values
         </h2>
 

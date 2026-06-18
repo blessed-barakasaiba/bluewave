@@ -1,25 +1,46 @@
 import { motion } from "framer-motion";
-import product1 from "../assets/products/product1.jpeg";
-import product2 from "../assets/products/product2.jpeg";
-import product3 from "../assets/products/product3.jpeg";
-import product4 from "../assets/products/product4.jpeg";
-import product5 from "../assets/products/product5.jpeg";
-import product6 from "../assets/products/product6.jpeg";
-import product7 from "../assets/products/product7.jpeg";
+import product8 from "../assets/products/product8.jpg";
+import product9 from "../assets/products/product9.jpg";
+import product10 from "../assets/products/product10.jpg";
+import product11 from "../assets/products/product11.jpg";
+import product12 from "../assets/products/product12.jpg";
+import product13 from "../assets/products/product13.jpg";
+import product14 from "../assets/products/product14.jpg";
+import product15 from "../assets/products/product15.jpg";
+import product16 from "../assets/products/product16.png";
+import product17 from "../assets/products/product17.jpg";
+import product18 from "../assets/products/product18.jpg";
+import product19 from "../assets/products/product19.jpg";
+import product20 from "../assets/products/product20.png";
+import product21 from "../assets/products/product21.jpg";
+import product22 from "../assets/products/product21.jpg";
+import product23 from "../assets/products/product22.jpg";
+import product24 from "../assets/products/product24.jpg";
 import productImage from "../assets/products/product1.jpeg";
 
 const Product = () => {
-  const phoneNumber = "0652298284"; // remove + sign
+  const phoneNumber = "255758585682";
 
 
     const services = [
-        { id: 1, name: "NONEL", description: "High performance watergel esplosives for various blasting applications.", image: product1 },
-        { id: 2, name: "INSTANTANEOS ELICTRICAL DETONATORS", description: "Ammonium Nitrate Fuel Oil (ANFO) for economical bulk blasting", image: product2 },
-        { id: 3, name: "BOOSTER-150g", description: "High strength det cord for reliable blasting performance.", image: product3 },
-        { id: 4, name: "TROJAN CAST BOOTERT-400g", description: "Reliable and accurate initiation with high safety standards.", image: product4 },
-        { id: 5, name: "", description: "Instantaneous electric detonators for precise blasting control.", image: product5 },
-        { id: 6, name: "BLASTING ACCESSORIES", description: "Complete range of accessories and consumables", image: product6 },
-        { id: 7, name: "BOOSTERS", description: "High energy boosters for enhanced detonation and performance.", image: product7 },
+        { id: 1, name: "Porous Prill Ammonium Nitrate (PPAN),", description: "Low-densit, Highly absorbent grade designed for the mining and quarrying industry.", image: product8 },
+        { id: 2, name: "Ammonium Nitrate Fuel Oil (ANFO)", description: "Zero oxygen balance VOD -2,500 m/s to 3,500 m/s Excellent rock-heaving capabilities Size/Wight – 25kgs", image: product9 },
+        { id: 3, name: "Explogel V6", description: "VOD -  3000 m/s to 5900 m/s Size range 25mmx270mm to 65x550mm", image: product10 },
+        { id: 4, name: "Super power 90", description: "High-strength, water-resistant cap-sensitive emulsion Size range 25mmx270mm to 65x550m VOD - 3,000 – 4,800 m/s", image: product11 },
+        { id: 5, name: "Kinmex emulsion explosives", description: " Size range 25mmx270mm to 65x550mm High energy release Water resistance, Excellent safety properties  VOD- 4500 m/s and 5,500 m/s", image: product12 },
+        { id: 6, name: "EMEX 70", description: "Water-resistant packaged explosive. Size range 25mmx270mm to 65x550mm VOD - 4,600m/s to 5,600m/s", image: product13 },
+        { id: 7, name: "400g pentolite booster", description: "High-density, cast explosive primer Density - 1.60 - 1.65 g/cm³ VOD - 7,300 - 7,500 m/s", image: product14 },
+        { id: 8, name: "150g pentolite booster", description: "High-density, cast explosive primer Density - 1.60 - 1.65 g/cm³ VOD - 7,300 - 7,500 m/s", image: product15 },
+        { id: 9, name: "Detonating cord", description: "Flexible linear explosive consisting of a high-velocity core (usually PETN) encased in a textile and plastic jacket. VOD- 6,500m/s to 7,000m/s. For mining, quarrying, construction.", image: product16 },
+        { id: 10, name: "Dual delayed NONEL", description: "High tensile strength and resistance to UV rays, wear, and tearing Length – variable length (6m to 21m) Available - 17/500 ms, 25/500 ms, or 42/500 ms.", image: product17 },
+        { id: 11, name: "Long period delayed detonators", description: "Initiation devices used in mining to provide extended time delays between explosions. High abrasion-resistant and temperature-resistant Delay periods – number 1 to 20 Connector; J-hook", image: product18 },
+        { id: 12, name: "Surface connector", description: "Provides precise, reliable and millisecond accurate sequential blasting. Delay timing: 17ms, 25ms, 42ms, and 67ms ", image: product19 },
+        { id: 13, name: "Cord relay", description: "Provides highly precise time intervals between blast holes or rows when detonating cord is used They are bi-directional", image: product20 },
+        { id: 14, name: "Instantaneous electrical detonators (IED)", description: "Detonate with no delay when an electric current is applied.", image: product21 },
+        { id: 15, name: "Blasting line/wire", description: "Highly durable, thicker gauge Lead or copper ", image: product22 },
+        { id: 16, name: "Plain detonators", description: "For initiating cap-sensitive explosives Non-electric", image: product23 },
+        { id: 17, name: "Safety fuse", description: "Flexible cord containing a compressed gunpowder core.", image: product24 },
+        
     ];
 
 const handleWhatsApp = (service:any) => {
@@ -50,7 +71,7 @@ Please give me a quotation.`;
                 </div>
             </div>
 
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 px-4 md:px-6 lg:px-8 xl:px-16 2xl:px-24 py-12">
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 px-4 md:px-6 lg:px-8 xl:px-16 2xl:px-72 py-12">
                 {services.map((service) => (
                     <motion.div
                         key={service.id}

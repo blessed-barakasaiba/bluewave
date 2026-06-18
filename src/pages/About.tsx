@@ -111,7 +111,6 @@ const mission_vision =[
  
   return (
     <>
-      {/* PAGE ONE: Hero */}
       <section
         className="relative w-full h-[60vh] bg-cover bg-center"
         style={{ 
@@ -147,12 +146,11 @@ const mission_vision =[
           </motion.p>
         </div>
       </section>
-      {/* PAGE TWO: About Us with Video */}
+
       <section className=" bg-gray-50 flex md:flex-row flex-col gap-14
-             px-5 md:px-6 lg:px-8 xl:px-16 2xl:px-24 py-14 ">
+             px-5 md:px-6 lg:px-8 xl:px-16 2xl:px-72 py-14 ">
         <div className="mx-auto grid md:grid-cols-2 gap-10 items-start">
 
-          {/* Left Side: Text */}
           <motion.div
             initial={{ opacity: 0, x: -40 }}
             whileInView={{ opacity: 1, x: 0 }}
@@ -163,7 +161,12 @@ const mission_vision =[
               About BlueWave Mawimbi Enterprises
             </h2>
             <p className="text-gray-700 text-lg md:text-xl leading-relaxed mb-4">
-              BLUEWAVE MAWIMBI ENTERPRISES COMPANY LIMITED
+              BLUEWAVE MAWIMBI ENTERPRISES COMPANY LIMITED 
+              is a limited  company with certificate of incorporation 
+              Number 186044487, P.O.BOX 472,KAHAMA.
+            </p>
+            <p className="text-gray-700 text-lg md:text-xl leading-relaxed mb-4">
+              BLUEWAVE MAWIMBI ENTERPRISES COMPANY LIMITED 
               is a dynamic and reliable Tanzanian company specializing in
               the supply of mining tools and equipment, and providing
               professional services to mining and drilling companies.
@@ -188,8 +191,6 @@ const mission_vision =[
             </p>
           </motion.div>
 
-          {/* Right Side: Video */}
-
           <motion.div
             initial={{ opacity: 0, x: 40 }}
             whileInView={{ opacity: 1, x: 0 }}
@@ -208,7 +209,7 @@ const mission_vision =[
 
         </div>
       </section>
-      {/* PAGE THREE: Mission & Vision */}
+
       <section className=" bg-gray-50 flex md:flex-row flex-col gap-1
              px-5 md:px-6 lg:px-8 xl:px-16 2xl:px-24 py-14 ">
         <motion.div
@@ -248,7 +249,7 @@ const mission_vision =[
       animate={{ opacity: 1, y: 0 }}
       transition={{ duration: 1 }}
       className="text-3xl md:text-5xl font-extrabold text-blue-900 mb-12">
-      Our Services
+       Services We Provide
     </motion.h2>
     <div className="grid md:grid-cols-3 gap-10">
       {service_info.map((service)=><Card icon={service.icon} heading={service.heading} description={service.description}/>)}
@@ -256,7 +257,6 @@ const mission_vision =[
   </motion.div>
 </section>
 
-      {/* PAGE FOUR: Our Core Values */}
 <section className=" bg-gray-50 flex md:flex-row flex-col gap-14
              px-5 md:px-6 lg:px-8 xl:px-16 2xl:px-24 py-14 ">
   <motion.div
@@ -278,29 +278,6 @@ const mission_vision =[
         {our_value.map((value)=><Card icon={value.icon} heading={value.title} description={value.body}/>)}
     </div>
   </motion.div>
-</section>
-
-{/* PAGE SIX: Leadership Team */}
-<section  className=" bg-gray-50 flex md:flex-row flex-col gap-14
-             px-5 md:px-6 lg:px-8 xl:px-16 2xl:px-24 py-14">
-  <motion.div
-    initial="hidden"
-    whileInView="visible"
-    viewport={{ once: true }}
-    transition={{ staggerChildren: 0.3 }}
-    className=" mx-auto text-center">
-      <motion.h2
-        initial={{ opacity: 0, y: 40 }}
-        animate={{ opacity: 1, y: 0 }}
-        transition={{ duration: 1 }}
-        className="text-3xl md:text-5xl font-extrabold text-blue-900 mb-12"
-      >
-        Leadership Team
-      </motion.h2>
-        <div className="grid md:grid-cols-3 gap-10">
-          {team_member_info.map((member)=><TeamMemberCard image={member.image_path} member_name={member.member_name} position={member.position} course={member.course} description={member.description} />)}
-        </div>
-    </motion.div>
 </section>
 </>
 

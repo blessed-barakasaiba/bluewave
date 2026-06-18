@@ -28,11 +28,11 @@ const WhatWeDo = () => {
     <section className="py-20 bg-white">
       <div className="">
 
-        <h2 className="text-4xl font-bold text-center mb-4">
+        <h2 className="text-blue-600 text-4xl font-bold text-center mb-4">
           What We Do
         </h2>
 
-        <p className="text-center text-gray-600 max-w-3xl mx-auto mb-12">
+        <p className="text-center text-lg text-gray-600 max-w-3xl mx-auto mb-12">
           BlueWave Mawimbi Enterprises Company Limited provides reliable
           mining equipment, drilling solutions and professional blasting
           services across Tanzania.

@@ -3,19 +3,9 @@ import { Building2, Users, Trophy, ShieldCheck } from "lucide-react";
 
 const stats = [
   {
-    icon: <Building2 size={40} />,
-    number: "100+",
-    title: "Projects Completed",
-  },
-  {
     icon: <Users size={40} />,
-    number: "50+",
+    number: "100+",
     title: "Satisfied Clients",
-  },
-  {
-    icon: <Trophy size={40} />,
-    number: "10+",
-    title: "Years Experience",
   },
   {
     icon: <ShieldCheck size={40} />,
@@ -47,7 +37,7 @@ const StatsSection = () => {
           </p>
         </motion.div>
 
-        <div className="grid grid-cols-2 lg:grid-cols-4 gap-8">
+        <div className="grid grid-cols-2 lg:grid-cols-2 gap-8">
 
           {stats.map((item, index) => (
             <motion.div
