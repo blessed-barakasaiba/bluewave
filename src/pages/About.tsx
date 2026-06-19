@@ -2,34 +2,11 @@ import { motion } from "framer-motion";
 import logo from "../assets/logo.png";
 import aboutImage from "../assets/about.jpeg";
 import videoAbout from "../assets/about.mp4";
-import TeamMemberCard from "../components/TeamMemberCard";
-import {Shield,Settings,Lightbulb,Globe,Handshake,Target,Eye,TrendingUp,Drill,ChartColumn,Sparkles,Bomb,Pickaxe,Truck } from "lucide-react"
+import {Shield,Settings,Lightbulb,Globe,Handshake,Target,Eye,TrendingUp,Drill,ChartColumn,Sparkles,Bomb,Truck } from "lucide-react"
 import Card from "../components/Card";
 
 function AboutUsHero() {
-  const team_member_info  = [
-    { image_path:undefined,
-      member_name:"Jane Smith",
-      position:"Operations Manager",
-      course:"BSc, Mechanical Engineering",
-      description:"10+ years of expertise in drilling, blasting and operational efficiency in mining projects."
-    },
-    { image_path:undefined,
-      member_name:"Michael Brown",
-      position:"Technical Director",
-      course:"MSc, Mining Technology",
-      description:"12+ years of technical consulting, blast design and compliance management"
 
-    },
-    { image_path:undefined,
-      member_name:"John Doe",
-      position:"Chief Executive Officer",
-      course:"MBA, Mining Engineering",
-      description:"15+ years of experience in mining operations, explosives supply and strategic leadership."
-
-    },
-    
-  ]
   const our_value = [
     {
       icon:<Shield/>,
