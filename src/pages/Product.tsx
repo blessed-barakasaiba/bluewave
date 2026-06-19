@@ -13,8 +13,8 @@ import product18 from "../assets/products/product18.jpg";
 import product19 from "../assets/products/product19.jpg";
 import product20 from "../assets/products/product20.png";
 import product21 from "../assets/products/product21.jpg";
-import product22 from "../assets/products/product21.jpg";
-import product23 from "../assets/products/product22.jpg";
+import product22 from "../assets/products/product22.jpg";
+import product23 from "../assets/products/product23.png";
 import product24 from "../assets/products/product24.jpg";
 import productImage from "../assets/products/product1.jpeg";
 

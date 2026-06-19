@@ -10,7 +10,7 @@ function Navbar() {
     const [scrolled, setScrolled] = useState(false);
     const location = useLocation();
 
-    const phoneNumber = "255758585682";
+    const phoneNumber = "255774853113";
 
     const goToWhatsApp = () => {
         const message = "Hello, I would like to get more information about your services.";

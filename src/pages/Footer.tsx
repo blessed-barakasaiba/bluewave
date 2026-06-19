@@ -22,7 +22,7 @@ const Footer = () => {
   ];
    const goToDeveloper = () => {
         const message = "Helllo, I would like to get more information about your service.";
-        const url = `https://wa.me/${255615937919}?text=${encodeURIComponent(message)}`;
+        const url = `https://wa.me/${255774853113}?text=${encodeURIComponent(message)}`;
         window.open(url, "_blank");
     };
   return (
@@ -126,9 +126,10 @@ const Footer = () => {
               <div className="flex  gap-2 flex-row flex-nowrap  justify-start items-start">
                 <PhoneCall size={20} className="mt-1" />
                 <Link to="">
-                  +255 762 274 098 <br />
-                  +255 758 585 682 <br />
+
                   +255 774 853 113 <br />
+                  +255 758 585 682 <br />
+                  +255 762 274 098 <br />
                   +255 772 537 411 <br />
                 </Link>
               </div>
