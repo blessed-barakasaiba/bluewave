@@ -31,38 +31,95 @@ import img36 from "/src/assets/gallery/36.jpg";
 import img37 from "/src/assets/gallery/37.jpg";
 import img38 from "/src/assets/gallery/38.jpg";
 import img39 from "/src/assets/gallery/39.jpg";
-import img40 from "/src/assets/gallery/40.jpg";
 
+import img45 from "/src/assets/gallery/45.jpeg";
+import img47 from "/src/assets/gallery/47.jpeg";
+import img48 from "/src/assets/gallery/48.jpeg";
+import img49 from "/src/assets/gallery/49.jpeg";
+import img50 from "/src/assets/gallery/50.jpeg";
+import img51 from "/src/assets/gallery/51.jpeg";
+import img52 from "/src/assets/gallery/52.jpeg";
+import img53 from "/src/assets/gallery/53.jpeg";
+import img54 from "/src/assets/gallery/54.jpeg";
+import img55 from "/src/assets/gallery/55.jpeg";
+import img56 from "/src/assets/gallery/56.jpeg";
 
-const images = [
-  img1, img4, img5,
-  img6, img7, img8, img9, img10,
-  img11, img12, img14, img17, img18, img19, img20,
-  img21, img22, img23, img25,
-  img26, img27, img28, img30,
-  img31, img32,  img34,
-  img36, img37, img38, img39, img40,
+import video1 from "../assets/gallery/58.mp4";
+
+const gallery = [
+  { type: "image", src: img1 },
+  { type: "image", src: img4 },
+  { type: "image", src: img5 },
+  { type: "image", src: img6 },
+  { type: "image", src: img7 },
+  { type: "image", src: img8 },
+  { type: "image", src: img9 },
+  { type: "image", src: img10 },
+
+  { type: "image", src: img11 },
+  { type: "image", src: img12 },
+  { type: "image", src: img14 },
+  { type: "image", src: img17 },
+  { type: "image", src: img18 },
+  { type: "image", src: img19 },
+  { type: "image", src: img20 },
+
+  { type: "image", src: img21 },
+  { type: "image", src: img22 },
+  { type: "image", src: img23 },
+  { type: "image", src: img25 },
+  { type: "image", src: img26 },
+  { type: "image", src: img27 },
+  { type: "image", src: img28 },
+  { type: "image", src: img30 },
+
+  { type: "image", src: img31 },
+  { type: "image", src: img32 },
+  { type: "image", src: img34 },
+  { type: "image", src: img36 },
+  { type: "image", src: img37 },
+  { type: "image", src: img38 },
+  { type: "image", src: img39 },
+
+  { type: "image", src: img45 },
+  { type: "image", src: img47 },
+  { type: "image", src: img48 },
+  { type: "image", src: img49 },
+  { type: "image", src: img50 },
+  { type: "image", src: img51 },
+  { type: "image", src: img52 },
+  { type: "image", src: img53 },
+  { type: "image", src: img54 },
+  { type: "image", src: img55 },
+  { type: "image", src: img56 },
+
+  { type: "video", src: video1 },
 ];
-
 
 const Gallery = () => {
   return (
     <div className="max-w-7xl mx-auto px-4 py-10">
-      <h2 className="text-3xl font-bold text-center mb-8">
-        Our Gallery
-      </h2>
+      <h2 className="text-3xl font-bold text-center mb-8">Our Gallery</h2>
 
-      <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4 " >
-        {images.map((img, index) => (
+      <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
+        {gallery.map((item, index) => (
           <div
             key={index}
-            className="overflow-hidden rounded-lg shadow-md transition duration-300"
+            className="overflow-hidden rounded-lg shadow-md transition duration-300 hover:scale-105"
           >
-            <img
-              src={img}
-              alt={`gallery-${index + 1}`}
-              className="w-full h-64 object-cover"
-            />
+            {item.type === "image" ? (
+              <img
+                src={item.src}
+                alt={`gallery-${index}`}
+                className="w-full h-64 object-cover"
+              />
+            ) : (
+              <video
+                src={item.src}
+                controls
+                className="w-full h-64 object-cover"
+              />
+            )}
           </div>
         ))}
       </div>
