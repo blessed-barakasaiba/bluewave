@@ -245,7 +245,7 @@ function Navbar() {
                     </motion.div>
                     <button className="flex flex-col text-xs items-start justify-center">
                         <span className="text-xs opacity-90">Call Us</span>
-                        <span className="text-sm font-bold">+255 758 585 682</span>
+                        <span className="text-sm font-bold">+255 774 853 113</span>
                     </button>
                 </motion.button>
             </div>
