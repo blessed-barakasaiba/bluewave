@@ -105,15 +105,6 @@ function AboutUsHero() {
     },
   ];
 
-  const [isMobile, setIsMobile] = useState(false);
-
-  useEffect(() => {
-    const checkScreen = () => setIsMobile(window.innerWidth < 768);
-    checkScreen();
-    window.addEventListener("resize", checkScreen);
-
-    return () => window.removeEventListener("resize", checkScreen);
-  }, []);
 
   return (
     <>
@@ -157,12 +148,13 @@ function AboutUsHero() {
         className=" bg-gray-50 flex md:flex-row flex-col gap-14
              px-5 md:px-6 lg:px-8 xl:px-16 2xl:px-72 py-14 "
       >
-        <div className="mx-auto grid md:grid-cols-2 gap-10 items-start">
+        <div className="flex lg:flex-row flex-col gap-10 items-start">
+
           <motion.div
             initial={{ opacity: 0, x: -40 }}
             whileInView={{ opacity: 1, x: 0 }}
             transition={{ duration: 1 }}
-            className="text-left"
+            className="text-left md:w-1/2 w-full"
           >
             <h2 className="text-3xl md:text-5xl font-extrabold text-blue-900 mb-6">
               About BlueWave Mawimbi Enterprises
@@ -197,14 +189,10 @@ function AboutUsHero() {
           </motion.div>
 
           <motion.div
-            initial={
-              isMobile
-                ? { opacity: 0, y: 40 } // phone: bottom -> top
-                : { opacity: 0, x: 40 } // desktop: right -> left
-            }
-            whileInView={{ opacity: 1, x: 0, y: 0 }}
+            initial={ { opacity: 0, y: 40 } }
+            whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 2 }}
-            className="w-full h-full flex justify-center"
+            className="w-full h-full md:w-1/2"
           >
             <video
               autoPlay

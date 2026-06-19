@@ -218,7 +218,7 @@ function Navbar() {
                                 </motion.div>
                                 <button onClick={() => goToWhatsApp()} className="flex flex-col items-start   ">
                                     <span className="text-xs opacity-90">Call Us</span>
-                                    <span className="text-sm font-bold">+255 758 585 682</span>
+                                    <span className="text-sm font-bold">+255 774 853 113</span>
                                 </button>
                             </motion.button>
                             

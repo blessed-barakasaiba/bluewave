@@ -4,7 +4,7 @@ const CallToAction = () => {
 
   const goToWhatsApp = () => {
     const url =
-      "https://wa.me/255758585682?text=Hello%20BlueWave%20Mawimbi,%20I%20need%20more%20information%20about%20your%20services.";
+      "https://wa.me/255774853113?text=Hello%20BlueWave%20Mawimbi,%20I%20need%20more%20information%20about%20your%20services.";
     window.open(url, "_blank");
   };
 
