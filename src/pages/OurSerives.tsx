@@ -19,7 +19,7 @@ const OurServices = () => {
         },
         {
             icon:<Sparkles/>,
-            heading:` Blasting $ Demolition,`,
+            heading:` Blasting and Demolition`,
             description:"Safe and controlled and demolition solutions to optimize fragmentation and productivity"
         },
         {
@@ -60,7 +60,7 @@ const OurServices = () => {
                 <h3 className="font-semibold">How we deliver exceptional results</h3>  
                 </div>
                 
-                <div className="flex flex-row items-center justify-center w-full flex-wrap gap-5 lg:gap-9">
+                <div className="grid md:grid-cols-3 gap-10">
                     {service_info.map((service)=><Card icon={service.icon} heading={service.heading} description={service.description} />)}
                 </div>
             </section>

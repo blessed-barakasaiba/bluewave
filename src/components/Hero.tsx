@@ -42,7 +42,7 @@ const Hero = () => {
                             transition={{ delay: 0.3, duration: 0.8 }}
                             className=" text-sm md:text-base mb-4"
                         >
-                            We supply high quality commercial explosives, mining tools and equipment and deliver safe, reliable and cost-effective drilling, blasting and related services that exceed our clients' expectations while ensuring safety, environmental care and sustainable value.
+                            We supply high quality commercial explosives, mining tools and equipment and deliver safe, reliable and cost-effective drilling, blasting and related services that exceed our clients, expectations while ensuring safety, environmental care and sustainable value.
                         </motion.p>
 
                         <motion.div

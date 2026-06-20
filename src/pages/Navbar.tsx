@@ -1,4 +1,4 @@
-import { BsTelephone, BsWhatsapp } from "react-icons/bs";
+import {  BsWhatsapp } from "react-icons/bs";
 import logo from "../assets/logo.png";
 import { Link, useLocation } from "react-router-dom";
 import { Menu, X } from "lucide-react";

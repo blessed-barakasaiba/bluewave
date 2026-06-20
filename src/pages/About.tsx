@@ -68,7 +68,7 @@ function AboutUsHero() {
     },
     {
       icon: <Sparkles />,
-      heading: ` Blasting $ Demolition,`,
+      heading: ` Blasting and Demolition`,
       description:
         "Safe and controlled and demolition solutions to optimize fragmentation and productivity",
     },
@@ -154,7 +154,7 @@ function AboutUsHero() {
             initial={{ opacity: 0, x: -40 }}
             whileInView={{ opacity: 1, x: 0 }}
             transition={{ duration: 1 }}
-            className="text-left md:w-1/2 w-full"
+            className="text-left lg:w-1/2 w-full"
           >
             <h2 className="text-3xl md:text-5xl font-extrabold text-blue-900 mb-6">
               About BlueWave Mawimbi Enterprises
@@ -192,7 +192,7 @@ function AboutUsHero() {
             initial={ { opacity: 0, y: 40 } }
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 2 }}
-            className="w-full h-full md:w-1/2"
+            className="w-full h-full lg:w-1/2"
           >
             <video
               autoPlay
@@ -209,7 +209,7 @@ function AboutUsHero() {
 
       <section
         className=" bg-gray-50 flex md:flex-row flex-col gap-1
-             px-4 md:px-6 lg:px-8 xl:px-16 2xl:px-24 py-14 "
+             px-4 md:px-6 lg:px-8 xl:px-16 2xl:px-70 py-14 "
       >
         <motion.div
           initial="hidden"

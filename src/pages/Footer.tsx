@@ -173,7 +173,7 @@ You can also reach developers directly:
       >
         <p className="flex flex-row flex-nowrap gap-2 items-center justify-center cursor-pointer hover:text-gray-300">
           Developed by Tanlife, <FaWhatsapp />
-          255615937919, 255652298284
+          255615937919, 255652298284<p className="hidden md:block">,255652854548</p>
         </p>
       </motion.div>
     </div>

@@ -16,7 +16,7 @@ const Card = ({icon,heading,description}:service_info) => {
             bg-white
             shadow-md 
             transition 
-            rounded-2xl p-8 
+            rounded-2xl p-8
             hover:shadow-blue-300/30 
             flex-1w-full
             sm:max-w-sm

@@ -45,6 +45,7 @@ import img55 from "/src/assets/gallery/55.jpeg";
 import img56 from "/src/assets/gallery/56.jpeg";
 
 import video1 from "../assets/gallery/58.mp4";
+import { motion } from "framer-motion";
 
 const gallery = [
   { type: "image", src: img1 },
@@ -98,13 +99,19 @@ const gallery = [
 
 const Gallery = () => {
   return (
-    <div className="max-w-7xl mx-auto px-4 py-10">
+    <div className="px-4 md:px-6 lg:px-8 xl:px-16 2xl:px-70 py-10">
       <h2 className="text-3xl font-bold text-center mb-8">Our Gallery</h2>
 
       <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
         {gallery.map((item, index) => (
-          <div
+          <motion.div
             key={index}
+
+                        initial={{ opacity: 0, y: 100 }}
+                        // whileHover={{ y: -10 }}
+                        whileInView={{ opacity: 1, y: 0 }}
+                        // viewport={{once:true, amount:0.3}}
+                        transition={{ duration: 0.1 }}
             className="overflow-hidden rounded-lg shadow-md transition duration-300 hover:scale-105"
           >
             {item.type === "image" ? (
@@ -120,7 +127,7 @@ const Gallery = () => {
                 className="w-full h-64 object-cover"
               />
             )}
-          </div>
+          </motion.div>
         ))}
       </div>
     </div>

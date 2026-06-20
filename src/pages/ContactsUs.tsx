@@ -146,6 +146,7 @@ function ContactUs() {
           </motion.h5>
         </div>
       </section>
+
       <section className="flex md:flex-row flex-col px-4 md:px-6 lg:px-8 xl:px-16 2xl:px-70 py-14 bg-gray-50">
         <div className="flex md:flex-row flex-col  items-center justify-evenly w-full gap-14">
           {contact_info.map((info) => (
@@ -158,8 +159,9 @@ function ContactUs() {
           ))}
         </div>
       </section>
+
       <section
-        className=" bg-gray-50 flex md:flex-row flex-col gap-14
+        className=" bg-gray-50 flex md:flex-row flex-col gap-5
              px-5 md:px-6 lg:px-8 xl:px-16 2xl:px-70 py-14"
       >
         <motion.div
