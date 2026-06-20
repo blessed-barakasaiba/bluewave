@@ -20,11 +20,21 @@ const Footer = () => {
     { id: 3, name: "Mining Chemicals", path: "/" },
     { id: 5, name: "Consultation and Design", path: "/" },
   ];
-   const goToDeveloper = () => {
-        const message = "Helllo, I would like to get more information about your service.";
-        const url = `https://wa.me/${255774853113}?text=${encodeURIComponent(message)}`;
-        window.open(url, "_blank");
-    };
+  const goToDeveloper = () => {
+    const message = `
+Hello, I would like to get more information about your service.
+
+You can also reach developers directly:
+- Support: 255652298284
+- Support: 255652854548
+- Support: 255615937919
+`;
+
+    const phone = "255615937919"; 
+
+    const url = `https://wa.me/${phone}?text=${encodeURIComponent(message)}`;
+    window.open(url, "_blank");
+  };
   return (
     <div className="w-full h-auto bg-gray-900 flex flex-col justify-center items-center gap-3 px-4 md:px-6 lg:px-8 xl:px-16 2xl:px-70 pt-8">
       <div className="flex justify-between  md:flex-row flex-col w-full">
@@ -126,7 +136,6 @@ const Footer = () => {
               <div className="flex  gap-2 flex-row flex-nowrap  justify-start items-start">
                 <PhoneCall size={20} className="mt-1" />
                 <Link to="">
-
                   +255 774 853 113 <br />
                   +255 758 585 682 <br />
                   +255 762 274 098 <br />
@@ -148,9 +157,9 @@ const Footer = () => {
         whileInView={{ opacity: 1, y: 0 }}
         viewport={{ once: true, amount: 0.3 }}
         transition={{ duration: 0.8 }}
-        className="flex items-center justify-between py-3  flex-row flex-wrap text-xs  w-full text-gray-400"
+        className="flex items-center justify-between py-3  flex-row flex-wrap text-xs  w-full text-gray-200"
       >
-        <p>&copy;2026 bluewave platform</p>
+        <p>&copy;2026 bluewave mawimbi company limited</p>
         <p>Privacy policy Terms of service Cookie policy Security</p>
       </motion.div>
 
@@ -159,11 +168,13 @@ const Footer = () => {
         whileInView={{ opacity: 1, y: 0 }}
         viewport={{ once: true, amount: 0.3 }}
         transition={{ duration: 0.8 }}
-        className="flex items-center justify-center py-3  flex-row flex-wrap text-xs  w-full text-gray-400"
-        onClick={()=>goToDeveloper()}
+        className="flex items-center justify-center py-3  flex-row flex-wrap text-xs  w-full text-gray-600"
+        onClick={() => goToDeveloper()}
       >
-        <p   className="flex flex-row flex-nowrap gap-2 items-center justify-center cursor-pointer hover:text-gray-300">Developed by Tanlife, <FaWhatsapp />255615937919</p>
-        
+        <p className="flex flex-row flex-nowrap gap-2 items-center justify-center cursor-pointer hover:text-gray-300">
+          Developed by Tanlife, <FaWhatsapp />
+          255615937919, 255652298284
+        </p>
       </motion.div>
     </div>
   );

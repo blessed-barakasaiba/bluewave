@@ -19,7 +19,7 @@ const Hero = () => {
 
                 <div className="absolute inset-0 bg-black/60"></div>
 
-                <div className="relative z-10 flex h-full items-center px-6 md:px-12 lg:px-20">
+                <div className="relative z-10 flex h-full items-center px-6 md:px-12 lg:px-70">
 
                     <div className="max-w-4xl text-white text-center md:text-left">
 
