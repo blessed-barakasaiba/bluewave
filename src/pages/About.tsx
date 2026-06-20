@@ -209,14 +209,14 @@ function AboutUsHero() {
 
       <section
         className=" bg-gray-50 flex md:flex-row flex-col gap-1
-             px-5 md:px-6 lg:px-8 xl:px-16 2xl:px-24 py-14 "
+             px-4 md:px-6 lg:px-8 xl:px-16 2xl:px-24 py-14 "
       >
         <motion.div
           initial="hidden"
           whileInView="visible"
           viewport={{ once: true }}
           transition={{ staggerChildren: 0.3 }}
-          className="mx-auto text-center"
+          className="text-center"
         >
           <motion.h2
             initial={{ opacity: 0, y: 40 }}

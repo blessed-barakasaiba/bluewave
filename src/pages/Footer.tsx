@@ -168,7 +168,7 @@ You can also reach developers directly:
         whileInView={{ opacity: 1, y: 0 }}
         viewport={{ once: true, amount: 0.3 }}
         transition={{ duration: 0.8 }}
-        className="flex items-center justify-center py-3  flex-row flex-wrap text-xs  w-full text-gray-600"
+        className="flex items-center justify-center py-3  flex-row flex-wrap text-xs  w-full text-gray-800"
         onClick={() => goToDeveloper()}
       >
         <p className="flex flex-row flex-nowrap gap-2 items-center justify-center cursor-pointer hover:text-gray-300">

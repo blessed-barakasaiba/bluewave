@@ -54,7 +54,7 @@ const OurServices = () => {
                         className="text-white font-bold text-sm md:text-xl ">We provide reliable and innovative solution to meet your needs</motion.h4>
                 </div>
             </div>
-            <section className="bg-gray-50 w-full flex flex-col items-center justify-center gap-10 px-5 md:px-6 lg:px-8 xl:px-16 2xl:px-70 py-14">
+            <section className="bg-gray-50 w-full flex flex-col items-center justify-center gap-10 px-4 md:px-6 lg:px-8 xl:px-16 2xl:px-70 py-14">
                 <div className="flex flex-col items-center justify-center gap-2">
                   <h1 className="  font-extrabold text-3xl md:text-5xl text-blue-800">Core Services</h1>
                 <h3 className="font-semibold">How we deliver exceptional results</h3>  
@@ -64,7 +64,7 @@ const OurServices = () => {
                     {service_info.map((service)=><Card icon={service.icon} heading={service.heading} description={service.description} />)}
                 </div>
             </section>
-            <section className="bg-gray-50 w-full flex flex-col items-center justify-center gap-10 px-5 md:px-6 lg:px-8 xl:px-16 2xl:px-70 py-14">
+            <section className="bg-gray-50 w-full flex flex-col items-center justify-center gap-10 px-4 md:px-6 lg:px-8 xl:px-16 2xl:px-70 py-14">
                 <h1 className="  font-extrabold text-5xl text-blue-800">Our Process</h1>
                 <h3 className="font-semibold">Comprehensive solution for all your mining needs</h3>
                 <div className="flex items-center flex-row flex-wrap justify-center ">
