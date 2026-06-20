@@ -19,7 +19,6 @@ import img21 from "/src/assets/gallery/21.jpg";
 import img22 from "/src/assets/gallery/22.jpg";
 import img23 from "/src/assets/gallery/23.jpg";
 import img25 from "/src/assets/gallery/25.jpg";
-import img26 from "/src/assets/gallery/26.jpg";
 import img27 from "/src/assets/gallery/27.jpg";
 import img28 from "/src/assets/gallery/28.jpg";
 import img30 from "/src/assets/gallery/30.jpg";
@@ -69,7 +68,6 @@ const gallery = [
   { type: "image", src: img22 },
   { type: "image", src: img23 },
   { type: "image", src: img25 },
-  { type: "image", src: img26 },
   { type: "image", src: img27 },
   { type: "image", src: img28 },
   { type: "image", src: img30 },
@@ -106,7 +104,6 @@ const Gallery = () => {
         {gallery.map((item, index) => (
           <motion.div
             key={index}
-
                         initial={{ opacity: 0, y: 100 }}
                         // whileHover={{ y: -10 }}
                         whileInView={{ opacity: 1, y: 0 }}

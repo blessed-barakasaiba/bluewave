@@ -1,4 +1,4 @@
-import {  BsWhatsapp } from "react-icons/bs";
+import { BsWhatsapp } from "react-icons/bs";
 import logo from "../assets/logo.png";
 import { Link, useLocation } from "react-router-dom";
 import { Menu, X } from "lucide-react";
@@ -14,7 +14,7 @@ function Navbar() {
 
   const goToWhatsApp = () => {
     const message =
-      "Hello, I would like to get more information about your services.";
+      "Hello, I would like to get more information about your services in bluewave mawimbi enterprise company limited.";
     const url = `https://wa.me/${phoneNumber}?text=${encodeURIComponent(message)}`;
     window.open(url, "_blank");
   };
@@ -52,22 +52,29 @@ function Navbar() {
         className="flex flex-row flex-nowrap items-center gap-3 cursor-pointer"
         whileHover="hover"
       >
-        <motion.img src={logo} className="h-12 w-auto" alt="logo" />
+        <Link to="/" className="flex items-center gap-3">
+          <motion.img
+            src={logo}
+            className="h-12 w-auto"
+            alt="BlueWave Mawimbi Logo"
+          />
 
-        <motion.div
-          className="flex flex-col leading-none justify-start"
-          transition={{ type: "spring", stiffness: 300 }}
-        >
-          <motion.h1 className="font-bold text-sm md:text-md whitespace-nowrap bg-blue-600 bg-clip-text text-transparent">
-            BLUEWAVE MAWIMBI
-          </motion.h1>
-          <motion.span
-            className="text-xs whitespace-nowrap text-gray-500 font-medium"
-            whileHover={{ opacity: 0.8 }}
+          <motion.div
+            className="flex flex-col leading-none"
+            transition={{ type: "spring", stiffness: 300 }}
           >
-            Enterprises Company Limited
-          </motion.span>
-        </motion.div>
+            <motion.h1 className="font-bold text-sm md:text-base whitespace-nowrap bg-blue-600 bg-clip-text text-transparent">
+              BLUEWAVE MAWIMBI
+            </motion.h1>
+
+            <motion.span
+              className="text-xs whitespace-nowrap text-gray-500 font-medium"
+              whileHover={{ opacity: 0.8 }}
+            >
+              Enterprises Company Limited
+            </motion.span>
+          </motion.div>
+        </Link>
       </motion.div>
 
       <div className="space-x-1 justify-center items-center hidden lg:flex">
@@ -193,6 +200,7 @@ function Navbar() {
                   stiffness: 300,
                 }}
                 whileTap="tap"
+                onClick={() => goToWhatsApp()}
                 className="flex w-full gap-3 items-center justify-center py-2 bg-red-600 hover:bg-red-700 rounded-lg text-white font-semibold"
               >
                 <motion.div
@@ -203,14 +211,10 @@ function Navbar() {
                     repeatDelay: 3,
                     repeatType: "reverse",
                   }}
-
                 >
                   <BsWhatsapp size={25} className="fill-white" />
                 </motion.div>
-                <button
-                  onClick={() => goToWhatsApp()}
-                  className="flex flex-col items-start   "
-                >
+                <button className="flex flex-col items-start   ">
                   <span className="text-xs opacity-90">Call Us</span>
                   <span className="text-sm font-bold">+255 774 853 113</span>
                 </button>

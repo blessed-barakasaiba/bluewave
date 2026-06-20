@@ -20,21 +20,24 @@ const Footer = () => {
     { id: 3, name: "Mining Chemicals", path: "/" },
     { id: 5, name: "Consultation and Design", path: "/" },
   ];
-  const goToDeveloper = () => {
-    const message = `
-Hello, I would like to get more information about your service.
+const goToDeveloper = () => {
+  const message = `Hello 👋,
 
-You can also reach developers directly:
-- Support: 255652298284
-- Support: 255652854548
-- Support: 255615937919
-`;
+I got your contact from the BlueWave Mawimbi Company Limited website.
 
-    const phone = "255615937919"; 
+I'm interested in your development services. Could we discuss a project?
 
-    const url = `https://wa.me/${phone}?text=${encodeURIComponent(message)}`;
-    window.open(url, "_blank");
-  };
+Support Contacts:
++255 615 937 919
++255 652 298 284
++255 652 854 548
+
+Thank you.`;
+
+  const phone = "255615937919";
+  const url = `https://wa.me/${phone}?text=${encodeURIComponent(message)}`;
+  window.open(url, "_blank");
+};
   return (
     <div className="w-full h-auto bg-gray-900 flex flex-col justify-center items-center gap-3 px-4 md:px-6 lg:px-8 xl:px-16 2xl:px-70 pt-8">
       <div className="flex justify-between  md:flex-row flex-col w-full">
@@ -128,7 +131,7 @@ You can also reach developers directly:
                 <Link to="" className="">
                   Segese Village
                   <br />
-                  Kahama distric
+                  Kahama district
                   <br />
                   Shinyanga Region - Tanzania
                 </Link>
@@ -173,7 +176,7 @@ You can also reach developers directly:
       >
         <p className="flex flex-row flex-nowrap gap-2 items-center justify-center cursor-pointer hover:text-gray-300">
           Developed by Tanlife, <FaWhatsapp />
-          255615937919, 255652298284<p className="hidden md:block">,255652854548</p>
+          255615937919
         </p>
       </motion.div>
     </div>
