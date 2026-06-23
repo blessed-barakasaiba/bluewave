@@ -1,5 +1,5 @@
 import HomePage from "./pages/HomePage";
-import { Routes, Route } from "react-router-dom";
+import { Routes, Route, Navigate } from "react-router-dom";
 import ContactUs from "./pages/ContactsUs";
 import AboutUs from "./pages/About.tsx";
 import OurServices from "./pages/OurSerives";
@@ -17,6 +17,7 @@ const App = () => {
           <Route path="/products" element={<Product />} />
           <Route path="/contact" element={<ContactUs />} />
           <Route path="/gallery" element={<Gallery />} />
+          <Route path="*" element={<Navigate to="/" replace />} />
         </Route>
       </Routes>
 
